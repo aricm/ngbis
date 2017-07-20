@@ -1,0 +1,44 @@
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="password"],
+input[type="number"],
+textarea {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    border-radius: 0px;
+    box-shadow: none;
+    background-image: none;
+    // -webkit-appearance: none;
+    font-family: inherit;
+    font-size: 0.875rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+
+    background-color: #fff;
+    border: 1px solid #eeeeee;
+    color: rgba(0, 0, 0, 0.75);
+}
+select {
+    padding: 0.3125rem;
+}
+.textarea-lg {
+    height: 6rem;
+}
+::-webkit-input-placeholder {
+    color: lighten($darkGray,10%);
+}
+
+
+.footer-form {
+    margin-top: 1.5rem;
+    input[type="text"],
+    input[type="email"],
+    select {
+        display: inline-block;
+        width: 14rem;
+        margin-right: 0.5rem
+    }
+}

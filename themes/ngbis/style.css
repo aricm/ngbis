@@ -1,0 +1,168 @@
+/*
+Theme Name: NetGain BiS
+Theme URI: NA
+Author: Net Gain SEO
+Author URI: http://www.netgainseo.com
+Version: 1.0
+Text Domain: ngbis
+*/
+/** COLORS */
+body {
+  background: #fff;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #093B72; }
+
+.bg-texture {
+  background: #e9ebea url(img/bg-texture.png); }
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="password"],
+input[type="number"],
+textarea {
+  display: block;
+  width: 100%;
+  height: 3rem;
+  border-radius: 0px;
+  box-shadow: none;
+  background-image: none;
+  font-family: inherit;
+  font-size: 0.875rem;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+  color: rgba(0, 0, 0, 0.75); }
+
+select {
+  padding: 0.3125rem; }
+
+.textarea-lg {
+  height: 6rem; }
+
+::-webkit-input-placeholder {
+  color: #86878b; }
+
+.footer-form {
+  margin-top: 1.5rem; }
+  .footer-form input[type="text"],
+  .footer-form input[type="email"],
+  .footer-form select {
+    display: inline-block;
+    width: 14rem;
+    margin-right: 0.5rem; }
+
+.site-header {
+  background-color: #093B72;
+  color: #fff; }
+  .site-header a {
+    color: #fff; }
+
+.header-logo {
+  padding: 1rem 0 0 0; }
+
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+  .main-navigation ul li {
+    padding: 0;
+    margin: 0;
+    display: inline-block; }
+  .main-navigation ul a {
+    display: block;
+    padding: 1rem 1rem; }
+
+.home-cards {
+  padding-top: 3rem; }
+  .home-cards .container {
+    display: flex; }
+
+.home-card-item {
+  position: relative;
+  overflow: hidden;
+  font-family: "Open Sans", sans-serif;
+  color: #fff;
+  margin: 1rem;
+  width: 259px;
+  height: 184px; }
+  .home-card-item:hover {
+    color: #fff;
+    text-decoration: none; }
+  .home-card-item span {
+    display: block; }
+
+.home-card-img {
+  z-index: 1; }
+
+.home-card-label {
+  z-index: 1;
+  font-weight: 700;
+  background-color: #093B72;
+  height: 3rem;
+  line-height: 3rem;
+  padding: 0 1.3rem; }
+
+.home-card-text {
+  position: absolute;
+  left: 0;
+  top: 184px;
+  width: 100%;
+  height: 184px;
+  padding: 1rem;
+  background-color: #093B72;
+  font-size: 0.75rem;
+  transition: transform 0.3s ease-in-out; }
+
+.home-card-item:hover .home-card-text {
+  transform: translateY(-100%); }
+
+.testimonials {
+  background: #093B72;
+  color: #fff;
+  padding: 3rem 0; }
+
+.footer-video {
+  margin-top: 2.5rem;
+  padding: 2rem 0; }
+
+.footer-video-text {
+  font-size: 1.25rem; }
+
+.footer-tagline {
+  padding: 3rem 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 1.25rem; }
+
+.subfooter-container {
+  padding: 2rem 0; }
+
+.footer-contact {
+  padding: 2rem 0;
+  background-color: #093B72;
+  color: #fff; }
+  .footer-contact h4 {
+    margin-bottom: 2rem; }
+  .footer-contact .btn {
+    margin-top: 2rem; }
+  .footer-contact p {
+    margin-bottom: 0; }
+
+.site-footer {
+  padding: 2rem 0;
+  background-color: #093B72;
+  color: #fff; }
+
+.btn {
+  border-radius: 0; }
+
+.btn-primary {
+  background-color: #89C478;
+  border-color: #89C478; }
+  .btn-primary:hover {
+    background-color: #79bc66; }
+
+/*# sourceMappingURL=style.css.map */

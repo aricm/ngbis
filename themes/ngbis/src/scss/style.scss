@@ -1,0 +1,27 @@
+/*
+Theme Name: NetGain BiS
+Theme URI: NA
+Author: Net Gain SEO
+Author URI: http://www.netgainseo.com
+Version: 1.0
+Text Domain: ngbis
+*/
+
+/** COLORS */
+$primaryColor: #093B72; // blue
+$secondaryColor: #89C478; // green
+$darkGray: #6d6e71;
+$mediumGray: #d9d9d9;
+$lightGray: #f1f2f2;
+
+@import "base";
+@import "layout";
+@import "forms";
+@import "header";
+@import "topnav";
+// @import "sidenav";
+// @import "mobnav";
+@import "content";
+// @import "blog";
+@import "footer";
+@import "overrides";

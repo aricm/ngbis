@@ -1,0 +1,10 @@
+.btn {
+    border-radius: 0;
+}
+.btn-primary {
+    background-color: $secondaryColor;
+    border-color: $secondaryColor;
+    &:hover {
+        background-color: darken($secondaryColor,5%);
+    }
+}
