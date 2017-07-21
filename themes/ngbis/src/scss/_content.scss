@@ -1,3 +1,21 @@
+.page-mast {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.contact-bar {
+    text-align: center;
+    padding: 2rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    background-color: $mediumGray;
+    .btn {
+        margin-left: 1rem;
+    }
+}
+
 // Service Cards
 .home-cards {
     padding-top: 3rem;
@@ -54,4 +72,24 @@
     background: $primaryColor;
     color: #fff;
     padding: 3rem 0;
+}
+
+
+.post-page {
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 2rem;
+    }
+    h5 {
+        margin-bottom: 1rem;
+    }
+    p, ul, ol {
+        margin-bottom: 2rem;
+    }
+    ol li {
+        margin-bottom: 1rem;
+    }
+}
+
+.text-gray {
+    color: $darkGray;
 }

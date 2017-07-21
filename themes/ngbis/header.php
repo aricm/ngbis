@@ -16,11 +16,15 @@
             </div>
             <div class="header-right d-flex flex-column justify-content-between">
                 <div class="header-info">
-                    phone/address
+                    <div class="header-phone"><a href="tel:5137213453">Call (513) 721-FILE</a></div>
+                    <div class="header-address">2201 Spring Grove Ave., Cincinnati, OH 45214</div>
                 </div>
                 <div class="header-nav-container hidden-lg-down">
                     <nav id="site-navigation" class="main-navigation" role="navigation">
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
+
+                        <a href="/contact" class="btn btn-primary nav-call-to-action">Work With Us</a>
+                        </ul>
                     </nav><!-- #site-navigation -->
                 </div>
             </div>

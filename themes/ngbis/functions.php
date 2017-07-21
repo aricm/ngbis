@@ -119,6 +119,45 @@ function nga_container($atts,$content){
 }
 add_shortcode('container','nga_container');
 
+
+function nga_button($atts,$content){
+    extract( shortcode_atts( array(
+        'class'         => '',
+        'style'         => 'primary',
+        'link'          => '',
+        'target'        => '',
+        'selector'      => 'a',
+        'icon'          => ''
+    ), $atts ) );
+
+
+    $content = do_shortcode( shortcode_unautop( $content ) );
+    $content = noParagraphs($content);
+
+    $return = '';
+
+    $return .= '<'.$selector.' '.(($link != '')?"href='".$link."'" : "").' '.(($selector == 'button')?"type=\"button\"":"").' class="btn btn-'.$style.' '.$class.'" role="button"'.(($target != '')?"data-target='".$target."'" : "").'>'.$content.(!empty($icon) ? ' <i class="fa fa-'.$icon.'"></i>' : '').'</'.$selector.'>';
+
+    return $return;
+}
+add_shortcode('button','nga_button');
+
+function nga_blockquote($atts, $content) {
+    extract( shortcode_atts( array(
+    ), $atts ) );
+
+    $content = do_shortcode( shortcode_unautop( $content ) );
+    $content = noParagraphs($content);
+
+    $return  = '';
+
+    $return .= '<blockquote class="blockquote">'.$content.'</blockquote>';
+
+    return $return;
+}
+add_shortcode('blockquote','nga_blockquote');
+
+
 // Bootstrap's responsive video
 function nga_responsive_video_shortcode($atts){
     extract( shortcode_atts( array(
@@ -164,6 +203,7 @@ function nga_home_card( $atts, $content ) {
 }
 add_shortcode('carditem','nga_home_card');
 
+
 // Needed for use in text widget
 function ngbis_template_directory_uri() {
     return get_template_directory_uri();
@@ -175,7 +215,7 @@ function ngbis_blog_url() {
 }
 add_shortcode( 'site_url', 'ngbis_blog_url' );
 
-// Element
+// Elements
 function nga_element($atts,$content){
     extract( shortcode_atts( array(
         'selector' => '',
@@ -194,3 +234,24 @@ function nga_element($atts,$content){
     return $return;
 }
 add_shortcode('element','nga_element');
+
+// Element2
+function nga_element2($atts,$content){
+    extract( shortcode_atts( array(
+        'selector' => '',
+        'class'    => '',
+        'id'       => '',
+        'style'    => ''
+    ), $atts ) );
+
+    $content = do_shortcode( shortcode_unautop( $content ) );
+    $content = noParagraphs($content);
+
+    $return = '';
+    $return .= '<'. $selector .' id="' . $id . '" class="' .  $class . '" style="'. $style .'">';
+        $return .= force_balance_tags($content);
+    $return .= '</'. $selector .'>';
+    return $return;
+}
+add_shortcode('element2','nga_element');
+

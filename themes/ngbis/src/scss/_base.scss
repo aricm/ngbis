@@ -4,6 +4,14 @@ body {
     color: $primaryColor;
 }
 
+a, a:hover, a:active, a:focus, a:visited {
+	text-decoration: none;
+	color: $linkColor;
+	transition: all 0.2s ease-in-out;
+}
+a:hover {
+	color: $secondaryColor;
+}
 
 .bg-texture {
     background: #e9ebea url(img/bg-texture.png);
