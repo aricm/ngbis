@@ -28,10 +28,10 @@
 
 <div class="container subfooter-container">
     <div class="row">
-        <div class="col-lg-6 footer-logo">
+        <div class="col col-lg-6 footer-logo">
             <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo2.png" alt=""></a>
         </div>
-        <div class="col-lg-6 d-flex flex-column justify-content-between">
+        <div class="col col-lg-6 d-flex flex-column justify-content-between">
             <div class="social-phone-container">
                 <div class="row footer-info">
                     <div class="col"><a href="tel:5137213453">Call (513) 721-FILE</a><br>
@@ -54,8 +54,20 @@
 </div>
 
 <footer class="container-fluid site-footer">
-    <div class="container">Copyright&copy; <?php echo date("Y"); ?>. All Rights Reserved <span class="pipe">|</span> <a href="/privacy">Privacy Statement</a></div>
+    <div class="container flex-footer">
+        <div class="copyright">Copyright&copy; <?php echo date("Y"); ?>. All Rights Reserved <span class="pipe">|</span> <a href="/privacy">Privacy Statement</a>
+        </div>
+        <div class="netgain-seo">
+            Website Designed by <img src="<?php bloginfo('template_url'); ?>/img/netgain-logo-sm.png" alt="">
+        </div>
+    </div>
 </footer>
 <?php wp_footer(); ?>
+
+<script>
+    jQuery('#navToggle').on('click', function() {
+        jQuery('#mainNav').toggleClass('open');
+    });
+</script>
 </body>
 </html>

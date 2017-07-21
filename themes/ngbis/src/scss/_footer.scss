@@ -65,7 +65,9 @@
     padding: 2rem 0;
     background-color: $primaryColor;
     color: #fff;
-    font-size: 0.95rem;
+    .copyright {
+        font-size: 0.95rem;
+    }
     a {
         color: #fff;
     }
@@ -73,4 +75,16 @@
         display: inline-block;
         padding: 0 1.5rem;
     }
+    .netgain-seo {
+        font-size: 0.75rem;
+        img {
+            display: inline-block;
+        }
+    }
+}
+
+.flex-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }

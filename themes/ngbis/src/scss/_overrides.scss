@@ -24,3 +24,20 @@
 		margin-bottom: 0;
 	}
 }
+
+
+@media (max-width: 992px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+}
+@media (max-width: 576px) {
+    .container {
+        width: 100%;
+    }
+}

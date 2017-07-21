@@ -1,4 +1,7 @@
-.main-navigation {
+.nav-toggle {
+    font-size: 3rem;
+}
+.main-nav {
     font-family: "Open Sans", sans-serif;
     ul {
         list-style: none;
@@ -18,13 +21,27 @@
     }
 }
 
+.main-nav .close-nav {
+    position: fixed;
+    display: block;
+    width: 0;
+    z-index: 9999999;
+    background-color: red;
+    color: #fff;
+}
+
+// Top level menu links hover decoration
+.main-nav > ul > li > a:hover {
+    color: $secondaryColor;
+}
+
 // First level nav display so we can put the call to action button after it
-.main-navigation > ul {
+.main-nav > ul {
     display: inline-block;
 }
 
 // Change a couple things for nested menus
-.main-navigation ul ul li {
+.main-nav ul ul li {
     font-size: 0.9rem;
     display: block;
     a {
@@ -33,22 +50,23 @@
 }
 
 // Add a bit of space above second level menu
-.main-navigation > ul > li > ul > li:first-of-type {
+.main-nav > ul > li > ul > li:first-of-type {
     margin-top: 0.5rem;
 }
 
 // Add pipe after first level links except last-child
-.main-navigation > ul > li:not(:last-child):after {
+.main-nav > ul > li:not(:last-child):after {
     position: absolute;
     content: '|';
     top: 50%;
     left: 100%;
     transform: translateY(-50%);
+    opacity: 0.75;
 }
 
 // Hide nested menus
-.main-navigation ul ul,
-.main-navigation ul ul ul {
+.main-nav ul ul,
+.main-nav ul ul ul {
     position: absolute;
     left: -9999rem;
     z-index: 10;
@@ -56,7 +74,7 @@
     width: 250px;
 }
 // Add arrow to top level menu items with children
-.main-navigation > ul > li.menu-item-has-children {
+.main-nav > ul > li.menu-item-has-children {
     > a {
         padding-right: 2.2rem;
         &:after {
@@ -75,10 +93,10 @@
             opacity: 0.5;
         }
     }
-    }
+}
 
 // Add arrow to nested menu items that have children
-.main-navigation ul ul li.menu-item-has-children:after {
+.main-nav ul ul li.menu-item-has-children:after {
     content: "\f0da";
     font-family: FontAwesome;
     font-style: normal;
@@ -96,39 +114,123 @@
 }
 
 // Align third level menu to top of second level link
-.main-navigation ul ul ul {
+.main-nav ul ul ul {
     top: 0;
 }
 // Show second level menu on first level hover
-.main-navigation > ul > li:hover > ul {
+.main-nav > ul > li:hover > ul {
     left: 0;
 }
 
-.main-navigation ul ul li:not(:last-child) a {
+.main-nav ul ul li:not(:last-child) a {
     border-bottom: 1px solid $primaryColor;
 }
 // 1px margin on nested menu items except last child
-.main-navigation ul ul li:not(:last-child) a:hover,
-.main-navigation ul ul li:not(:last-child).current-menu-item a {
+.main-nav ul ul li:not(:last-child) a:hover,
+.main-nav ul ul li:not(:last-child).current-menu-item a {
     border-bottom: 1px solid darken($secondaryColor,10%);
 }
 // Show third level menu on second level hover
-.main-navigation ul ul li:hover > ul {
+.main-nav ul ul li:hover > ul {
     left: 100%;
 }
 
 // Nested menu links hover + active
-.main-navigation ul ul a:hover,
-.main-navigation ul ul li.current-menu-item a {
+.main-nav ul ul a:hover,
+.main-nav ul ul li.current-menu-item a {
     background-color: $secondaryColor;
 }
 
 // Active first level link
-.main-navigation > ul > li.current-menu-item {
+.main-nav > ul > li.current-menu-item {
     font-weight: bold;
 }
 
 // The button
 .nav-call-to-action {
     padding: 0.25rem 1rem !important;
+}
+
+/****** MOBILE ******/
+@media screen and (max-width: 1200px) {
+    .header-nav-container {
+        text-align: right;
+    }
+    .main-nav {
+        box-shadow: 10px 0 20px rgba(black,0.2);
+        text-align: left;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 300px;
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: auto;
+        z-index: 999999;
+        transition: width 0.2s ease-in-out;
+            background: $primaryColor;
+        &.open {
+            width: 320px;
+            .close-nav {
+                width: 320px;
+            }
+        }
+        ul, li {
+            position: static !important;
+            display: block !important;
+            width: auto !important;
+        }
+        li {
+            position: relative !important;
+        }
+        li > a {
+            padding: 0.5rem !important;
+            border-bottom: 1px solid $primaryColor;
+            &:hover {
+                background-color: $secondaryColor !important;
+                color: #fff !important;
+                border-bottom: 1px solid darken($secondaryColor,10%);
+            }
+        }
+        > ul > li:not(:last-child):after { // lose the pipe
+            content: ' ';
+        }
+        ul ul li.menu-item-has-children:after {
+            content: " ";
+        }
+         ul li.menu-item-has-children > a { // down arrow
+            background-color: lighten($primaryColor,5%);
+            &:after {
+                content: '\f0dd';
+                font-family: "FontAwesome";
+                position: absolute;
+                padding: 0 0.5rem;
+                top: 1rem;
+                right: 0;
+                opacity: 1;
+            }
+        }
+         ul ul li.menu-item-has-children > a { // second level
+            background-color: lighten($primaryColor,2%);
+            &:after {
+                top: 0.35rem;
+            }
+        }
+        li.current-menu-item > a {
+            background-color: $secondaryColor !important;
+            border-bottom: 1px solid darken($secondaryColor,10%);
+        }
+        > ul > li > ul > li:first-of-type { // lose the margin
+            margin-top: 0;
+        }
+        ul ul li a {
+            padding-left: 1.75rem !important;
+        }
+        ul ul ul li a {
+            padding-left: 3rem !important;
+        }
+        .nav-call-to-action {
+            display: block;
+        }
+    }
 }
