@@ -16,21 +16,43 @@
         padding: 0.4rem 2rem;
     }
 }
+@media screen and (max-width: 690px) {
+    .contact-bar {
+        padding: 1.75rem 1rem;
+        .btn {
+            margin: 1rem auto 0 auto;
+            display: block;
+            max-width: 180px;
+            text-align: center;
+        }
+    }
+}
 
 // Service Cards
 .home-cards {
     padding-top: 3rem;
     .container {
         display: flex;
+        align-content: center;
+        justify-content: center;
+        flex: 1 0;
     }
 }
 
+@media screen and (max-width: 1020px) {
+    .home-cards .container {
+        // flex: 0 0 auto;
+        flex-wrap: wrap;
+        flex: 1 0;
+        // justify-content: space-around;
+    }
+}
 .home-card-item {
     position: relative;
     overflow: hidden;
     font-family: "Open Sans", sans-serif;
     color: #fff;
-    margin: 1rem;
+    margin: 0.5rem;
     width: 259px;
     height: 184px;
     &:hover {
@@ -72,7 +94,8 @@
 .testimonials { // container
     background: $primaryColor;
     color: #fff;
-    padding: 3rem 0;
+    padding: 3rem 0 0 0;
+
 }
 
 
@@ -145,6 +168,29 @@
     ul {
         margin-left: 0;
         padding-left: 1.75rem;
+    }
+}
+
+.customer-list-item {
+    &:not(:last-child) {
+        margin-bottom: 5rem;
+    }
+    .customer-logo {
+        flex-grow: 0;
+    }
+}
+.back-to-customers {
+    margin-bottom: 1.5rem;
+    color: $darkGray !important;
+}
+
+@media screen and (max-width: 767px) {
+    .blog-sidebar {
+        margin-top: 2.5rem;
+        border-top: 2px solid $mediumGray;
+    }
+    .back-to-blog {
+        margin-top: 1.5rem;
     }
 }
 

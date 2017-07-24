@@ -17,14 +17,14 @@
             <div class="header-right">
                 <div class="header-info">
                     <div class="header-phone"><a href="tel:5137213453">Call (513) 721-FILE</a></div>
-                    <div class="header-address">2201 Spring Grove Ave., Cincinnati, OH 45214</div>
+                    <div class="header-address hidden-md-down">2201 Spring Grove Ave., Cincinnati, OH 45214</div>
                 </div>
                 <div class="header-nav-container">
 
                     <a href="javascript:void(0);" id="navToggle" class="nav-toggle hidden-xl-up"><i class="fa fa-bars"></i></a>
 
                     <nav id="mainNav" class="main-nav" role="navigation">
-                        <button type="button btn btn-warning" class="close-nav">Close <i class="fa fa-times"></i></button>
+
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
 
                         <a href="/contact" class="btn btn-primary nav-call-to-action">Work With Us</a>

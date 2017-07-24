@@ -13,6 +13,12 @@
 
 .header-logo {
     padding: 1rem 0 0 0;
+    transition: all 0.2s ease-in-out;
+    max-width: 200px;
+    img {
+        max-width: 100%;
+        transition: all 0.2s ease-in-out;
+    }
 }
 
 .header-info {
@@ -33,4 +39,73 @@
 }
 .header-address {
 	font-size: 0.95rem;
+}
+
+.sticky-header {
+    .site-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 99990;
+        box-shadow: 0 10px 20px rgba(black,0.2);
+    }
+    .header-address {
+        display: none;
+    }
+    .header-phone {
+        margin-bottom: 0.25rem;
+    }
+    .header-info {
+        margin: 0.5rem 0 0 0;
+    }
+    .header-logo {
+        max-width: 100px;
+    }
+    .header-nav-container {
+        margin: 0 0 0 1.5rem;
+    }
+    .main-nav {
+        font-size: 90%;
+    }
+}
+
+
+@media screen and (max-width: 1199px) {
+    .flex-header {
+        align-items: center;
+    }
+    .header-right {
+        flex-direction: row;
+        align-items: center;
+    }
+    .header-info {
+        margin: 1rem 0;
+    }
+    .header-logo {
+        max-width: 100px;
+        padding-top: 0;
+    }
+    .header-phone {
+        margin: 0;
+    }
+    .header-nav-container {
+        margin: 0 0 0 1.5rem;
+    }
+}
+
+@media screen and (max-width: 440px) {
+    .flex-header {
+        flex-direction: column;
+        text-align: center;
+    }
+    .header-logo {
+        margin: 0.5rem 0 0 0;
+    }
+    .header-phone {
+        margin: 0;
+    }
+    .header-info {
+        margin: 0;
+    }
 }

@@ -14,7 +14,8 @@
         <div class="col col-12 col-md-9 post-blog">
 
             <div class="blog-listing">
-            <?php while ( have_posts() ) : the_post(); ?>
+            <?php if ( have_posts() ) : ?>
+                <?php while ( have_posts() ) : the_post(); ?>
                 <article>
 
                     <h2 class="post-title">
@@ -26,7 +27,12 @@
                     <div style="font-weight: bold;font-style:italic;">Continue reading <a href="<?php the_permalink(); ?>">here...</a></div>
 
                 </article>
-            <?php endwhile; // End of the loop. ?>
+                <?php endwhile; // End of the loop. ?>
+            <?php else: ?>
+                <div class="alert alert-warning" style="margin-top: 1.5rem;">
+                    <p>There are no results for the term(s) <strong><em><?php echo $_GET['s']; ?></em></strong></p>
+                </div>
+            <?php endif; ?>
             </div>
 
         </div>

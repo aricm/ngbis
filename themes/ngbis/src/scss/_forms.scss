@@ -38,6 +38,29 @@ select {
     margin-top: 1rem;
     .company-info {
         padding: 1.5rem 0 0 4rem;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+}
+@media screen and (max-width: 767px) {
+    .contact-us-text {
+        p {
+            margin-bottom: 1rem !important;
+        }
+    }
+    .page-form-container {
+        .company-info {
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 1.5rem 0 0 0;
+            h6 {
+                margin-bottom: 0.5rem !important;
+            }
+            .contact-phone {
+                order: 2;
+            }
+        }
     }
 }
 .page-form {

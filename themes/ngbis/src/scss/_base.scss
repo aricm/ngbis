@@ -2,6 +2,16 @@ body {
     background: #fff;
     font-family: Arial, Helvetica, sans-serif;
     color: $primaryColor;
+    &.no-scroll {
+        position: absolute;
+        overflow: hidden;
+    }
+}
+@media screen and (min-width: 1200px) {
+    body.no-scroll {
+        position: static;
+        overflow: auto;
+    }
 }
 
 a, a:hover, a:active, a:focus, a:visited {
