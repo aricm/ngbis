@@ -624,6 +624,10 @@ select {
   .social-icons {
     text-align: center; } }
 
+@media screen and (max-width: 605px) {
+  .social-phone-container {
+    margin: 1.5rem 0; } }
+
 @media screen and (max-width: 550px) {
   .footer-info {
     flex-direction: column; }

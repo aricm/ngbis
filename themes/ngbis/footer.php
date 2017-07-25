@@ -8,7 +8,9 @@
                 <p>At BiS, we understand that your documents are the heart of your business, and we don't want you to miss a beat.</p>
                 <p>Storage is important; but quick, easy access to your records is absolutely critical.</p>
                 <p>Document management is time-consuming. Instead of focusing on their primary responsibilities and tasks, your employees may be wasting valuable time hunting down files and organizing overdue purge projects.</p>
-                <a href="http://bis.dev:81/about/record-control-experts/" class="btn btn-primary">LEARN MORE <i class="fa fa-caret-right"></i></a>
+                <p>
+                    <a href="http://bis.dev:81/about/record-control-experts/" class="btn btn-primary">LEARN MORE <i class="fa fa-caret-right"></i></a>
+                </p>
             </div>
             <div class="col col-12 col-lg-7 col-md-12 col-sm-12 embed-responsive embed-responsive-16by9 footer-video-player">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pEjOKBjLPDI?rel=0" allowfullscreen></iframe>
