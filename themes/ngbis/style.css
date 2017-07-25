@@ -487,6 +487,9 @@ select {
   background: #093B72;
   color: #fff;
   padding: 3rem 0 0 0; }
+  .testimonials a {
+    transition: none !important;
+    transition: color 0.2s ease-in-out !important; }
 
 .post-page h1, .post-page h2, .post-page h3, .post-page h4, .post-page h5, .post-page h6 {
   margin-bottom: 2rem; }
