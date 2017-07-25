@@ -612,6 +612,10 @@ select {
       box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.1);
       background-color: #89C478; }
 
+@media screen and (max-width: 1199px) {
+  .footer-info {
+    font-size: 1.5rem; } }
+
 @media screen and (max-width: 990px) {
   .footer-logo {
     text-align: center; }
