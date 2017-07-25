@@ -27,7 +27,7 @@
 
                         <?php wp_nav_menu( array( 'theme_location' => 'primary', 'container' => '' ) ); ?>
 
-                        <a href="/contact" class="btn btn-primary nav-call-to-action">Work With Us</a>
+                        <a href="<?php echo home_url(); ?>/contact" class="btn btn-primary nav-call-to-action">Work With Us</a>
                         </ul>
                     </nav><!-- #site-navigation -->
                 </div>

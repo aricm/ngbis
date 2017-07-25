@@ -95,6 +95,7 @@
     background: $primaryColor;
     color: #fff;
     padding: 3rem 0 0 0;
+    margin-bottom: 2.5rem;
     a {
         transition: none !important;
         transition: color 0.2s ease-in-out !important;
@@ -120,6 +121,9 @@
 .post-page, .post-blog {
     .float-right {
         margin: 1rem 0 1rem 1rem;
+    }
+    iframe {
+        max-width: 100%;
     }
 }
 
@@ -204,6 +208,35 @@
     }
     .back-to-blog {
         margin-top: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .home-slider-text {
+        font-size: 0.75rem;
+    }
+}
+
+@media screen and (max-width: 591px) {
+    .post-page {
+        .btn {
+            white-space: normal;
+            display: block;
+        }
+    }
+    .customer-list-item {
+        .customer-logo {
+            flex-grow: 1;
+            p {
+                text-align: center;
+            }
+        }
+        .customer-excerpt {
+            flex-basis: 100%;
+        }
+        .btn {
+            display: block;
+        }
     }
 }
 

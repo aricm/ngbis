@@ -34,7 +34,7 @@ select {
 
 .page-form-container {
     background-color: $lightGray;
-    padding: 1.75rem;
+    padding: 1rem 0.5rem;
     margin-top: 1rem;
     .company-info {
         padding: 1.5rem 0 0 4rem;
@@ -68,8 +68,7 @@ select {
     flex-wrap: wrap;
     p {
         flex: 1 0 45%;
-        margin-right: 1rem;
-        margin-bottom: 1rem !important;
+        margin: 0.5rem !important;
     }
     .comment-container {
         flex: 1 0 90%;
@@ -87,15 +86,82 @@ select {
         height: 2.5rem;
         line-height: 2.5rem;
     }
+    .submit-container {
+        display: flex;
+        width: 100%;
+        flex-direction: row;
+        // align-items: flex-end;
+        justify-content: space-around;
+        .wpcf7-form-control-wrap {
+            // top: 10px;
+            width: 268px;
+        }
+        p {
+            margin: 17px 0 0 !important;
+            flex: 0;
+        }
+        .wpcf7-form-control-wrap {
+            flex: 0;
+        }
+        .page-recaptcha {
+            transform: scale(0.8);
+        }
+    }
 }
 
+@media screen and (max-width: 998px) {
+    .page-form {
+        .submit-container {
+            .wpcf7-form-control-wrap {
+                left: -40px;
+            }
+            p {
+                margin-top: 1rem !important;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .page-form-container {
+        // padding: 1.5rem 1rem;
+        .col {
+            padding: 0 !important;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .page-form {
+        .submit-container {
+            flex-direction: column;
+            margin-bottom: 2rem;
+            align-items: center;
+            p {
+                margin: 1rem 0 0 !important;
+            }
+            .wpcf7-form-control-wrap {
+                left: -22px;
+            }
+        }
+    }
+}
 .footer-form {
     margin-top: 1.5rem;
     display: flex;
     flex-wrap: wrap;
-    p {
-        flex: 1 0 21%;
+    justify-content: center;
+    p, .wpcf7-form-control-wrap {
+        flex: 1 0 17%;
         margin-right: 0.5rem
+    }
+    .wpcf7-form-control-wrap {
+        width: 191px;
+    }
+    .footer-recaptcha {
+        transform: scale(0.63);
+        position: relative;
+        left: -40px;
+        top: 10px;
     }
     .submit-container, .wpcf7-validation-errors {
         flex: 1 0 100%;
@@ -117,4 +183,34 @@ select {
 .wpcf7-not-valid-tip {
     font-size: 80%;
     opacity: 0.75;
+}
+
+@media screen and (max-width: 990px) {
+    .footer-form {
+        .wpcf7-form-control-wrap {
+            flex: 1 0 100%;
+        }
+        .footer-recaptcha {
+            left: 111px;
+            top: -14px;
+        }
+        .submit-container .btn {
+            margin-top: 0 !important;
+        }
+    }
+}
+@media screen and (max-width: 767px) {
+    .footer-form {
+        .footer-recaptcha {
+            left: 53px;
+        }
+    }
+}
+
+@media screen and (max-width: 573px) {
+    .footer-form {
+        .footer-recaptcha {
+            left: 0px;
+        }
+    }
 }

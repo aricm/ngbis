@@ -162,7 +162,8 @@
     transition: width 0.2s ease-in-out;
     &.open {
         width: 400px;
-        max-width: 100%;
+        max-width: 98%;
+        padding-right: 20px;
     }
 }
 
@@ -189,6 +190,7 @@
         background: $primaryColor;
         &.open {
             width: 400px;
+            max-width: 98%;
         }
         ul {
             box-shadow: none !important;

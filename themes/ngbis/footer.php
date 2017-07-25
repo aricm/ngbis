@@ -9,7 +9,7 @@
                 <p>Storage is important; but quick, easy access to your records is absolutely critical.</p>
                 <p>Document management is time-consuming. Instead of focusing on their primary responsibilities and tasks, your employees may be wasting valuable time hunting down files and organizing overdue purge projects.</p>
                 <p>
-                    <a href="http://bis.dev:81/about/record-control-experts/" class="btn btn-primary">LEARN MORE <i class="fa fa-caret-right"></i></a>
+                    <a href="<?php echo home_url(); ?>/about/record-control-experts/" class="btn btn-primary">LEARN MORE <i class="fa fa-caret-right"></i></a>
                 </p>
             </div>
             <div class="col col-12 col-lg-7 col-md-12 col-sm-12 embed-responsive embed-responsive-16by9 footer-video-player">
@@ -51,7 +51,7 @@
                 <a href="https://www.youtube.com/user/721File" target="_blank"><i class="fa fa-fw fa-youtube"></i></a>
                 <a href="https://www.linkedin.com/company/business-information-solutions-inc" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
                 <a href="https://plus.google.com/108312288827231568420/posts" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
-                <a href="/blog"><i class="fa fa-fw fa-rss"></i></a>
+                <a href="<?php echo home_url(); ?>/blog"><i class="fa fa-fw fa-rss"></i></a>
             </div>
         </div>
     </div>
@@ -59,7 +59,7 @@
 
 <footer class="container-fluid site-footer">
     <div class="container flex-footer">
-        <div class="copyright">Copyright&copy; <?php echo date("Y"); ?>. All Rights Reserved <span class="pipe">|</span> <span class="copyright-links"><a href="/privacy">Privacy Statement</a></span>
+        <div class="copyright">Copyright&copy; <?php echo date("Y"); ?>. All Rights Reserved <span class="pipe">|</span> <span class="copyright-links"><a href="<?php echo home_url(); ?>/privacy">Privacy Statement</a></span>
         </div>
         <div class="netgain-seo">
             Website Designed by <img src="<?php bloginfo('template_url'); ?>/img/netgain-logo-sm.png" alt="">

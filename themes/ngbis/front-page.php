@@ -4,7 +4,7 @@
 	<?php echo do_shortcode('[smartslider3 slider=2]'); ?>
 
 	<div class="contact-bar">
-		Control the Security of Managing Your Business Records <a href="/contact" class="btn btn-primary">Work With Us</a>
+		Control the Security of Managing Your Business Records <a href="<?php echo home_url(); ?>/contact" class="btn btn-primary">Work With Us</a>
 	</div>
 
     <?php while ( have_posts() ) : the_post(); ?>

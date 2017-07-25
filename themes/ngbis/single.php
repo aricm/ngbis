@@ -2,32 +2,29 @@
     get_header();
 ?>
 <div class="page-mast">
-    <img src="/wp-content/uploads/2017/07/mast-backup.png" alt="">
+    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/07/mast-backup.png" alt="">
 </div>
 
 <div class="contact-bar">
-    Control the Security of Managing Your Business Records <a href="/contact" class="btn btn-primary">Work With Us</a>
+    Control the Security of Managing Your Business Records <a href="<?php echo home_url(); ?>/contact" class="btn btn-primary">Work With Us</a>
 </div>
 
 <div class="container py-5">
     <div class="row">
         <div class="col col-12 col-md-9 blog-post-content">
 
-            <div class="blog-listing">
             <?php while ( have_posts() ) : the_post(); ?>
-                <article>
 
-                    <h2 class="post-title">
-                        <a title="<?php the_title_attribute(); ?>" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-                    </h2>
-
-                    <em><?php the_excerpt(); ?></em>
-
-                    <div style="font-weight: bold;font-style:italic;">Continue reading <a href="<?php the_permalink(); ?>">here...</a></div>
-
-                </article>
-            <?php endwhile; // End of the loop. ?>
+            <div class="blog-post-title">
+                <h1><?php the_title(); ?></h1>
+                <i class="fa fa-calendar"></i>
+                <small class="text-muted"><em><?php the_date(); ?></em></small>
             </div>
+            <article class="blog-post-body">
+                <?php the_content(); ?>
+            </article>
+
+            <?php endwhile; // End of the loop. ?>
 
         </div>
 

@@ -10,7 +10,7 @@
 			<?php endif; ?>
 
 			<div class="contact-bar">
-				Control the Security of Managing Your Business Records <a href="/contact" class="btn btn-primary">Work With Us</a>
+				Control the Security of Managing Your Business Records <a href="<?php echo home_url(); ?>/contact" class="btn btn-primary">Work With Us</a>
 			</div>
 
     	<div class="container py-5">

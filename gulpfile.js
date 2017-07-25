@@ -15,7 +15,8 @@ var cssDest = './themes/' + themeDir;
 var sassOptions = {
   errLogToConsole: true,
   includePaths: [cssSrc],
-  outputStyle: 'nested'
+  outputStyle: 'compressed'
+  // outputStyle: 'nested'
 };
 
 // Default options for autoprefixer are:
@@ -34,8 +35,8 @@ gulp.task('sass', function () {
     .src(cssSrc)
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
-    .pipe(sourcemaps.write('./'))
-    // .pipe(autoprefixer()) // use default options (see above)
+    .pipe(autoprefixer()) // use default options (see above)
+    .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest(cssDest));
 });
 
