@@ -507,6 +507,14 @@ select {
   width: 100%;
   height: 100%; }
 
+.customer-flex-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 2rem; }
+  .customer-flex-logos p {
+    margin: 0.5rem 0.5rem 0 !important; }
+
 .blog-listing h1 {
   font-size: 1.75rem;
   margin-bottom: 1.5rem; }
