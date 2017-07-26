@@ -1,5 +1,5 @@
 </main>
-
+<?php if( get_the_post_id() != 16 ): ?>
 <div class="container-fluid bg-texture footer-video">
     <div class="container">
         <div class="row">
@@ -18,40 +18,45 @@
         </div>
     </div>
 </div>
+<?php endif; ?>
 
 <div class="footer-tagline">
     BiS will take excellent care of your important documents.
 </div>
 
+<?php if( get_the_post_id() != 16 ): ?>
 <div class="container-fluid text-center footer-contact">
     <div class="container">
         <h4>Contact Us!</h4>
         <?php echo do_shortcode( '[contact-form-7 id="4" title="Footer Contact Us" html_class="footer-form"]' ); ?>
     </div>
 </div>
+<?php endif; ?>
 
-<div class="container subfooter-container">
-    <div class="row">
-        <div class="col col-12 col-sm-12 col-lg-6 footer-logo">
-            <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo2.png" alt=""></a>
-        </div>
-        <div class="col col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-between">
-            <div class="social-phone-container">
-                <div class="row footer-info">
-                    <div class="col"><a href="tel:5137213453">Call (513) 721-FILE</a><br>
-                    <a href="tel:5137213453">(513) 721-3453</a></div>
-
-                    <div class="col">2201 Spring Grove Ave.<br>
-                    Cincinnati, OH 45214</div>
-                </div>
+<div class="container-fluid" <?php if( get_the_post_id() === 16 ): ?>style="background-color: #f1f2f2"<?php endif; ?>>
+    <div class="container subfooter-container">
+        <div class="row">
+            <div class="col col-12 col-sm-12 col-lg-6 footer-logo">
+                <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo2.png" alt=""></a>
             </div>
-            <div class="social-icons">
-                <a href="https://www.facebook.com/BIS.Inc" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
-                <a href="https://twitter.com/721file" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
-                <a href="https://www.youtube.com/user/721File" target="_blank"><i class="fa fa-fw fa-youtube"></i></a>
-                <a href="https://www.linkedin.com/company/business-information-solutions-inc" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
-                <a href="https://plus.google.com/108312288827231568420/posts" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
-                <a href="<?php echo home_url(); ?>/blog"><i class="fa fa-fw fa-rss"></i></a>
+            <div class="col col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-between">
+                <div class="social-phone-container">
+                    <div class="row footer-info">
+                        <div class="col"><a href="tel:5137213453">Call (513) 721-FILE</a><br>
+                        <a href="tel:5137213453">(513) 721-3453</a></div>
+
+                        <div class="col">2201 Spring Grove Ave.<br>
+                        Cincinnati, OH 45214</div>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/BIS.Inc" target="_blank"><i class="fa fa-fw fa-facebook"></i></a>
+                    <a href="https://twitter.com/721file" target="_blank"><i class="fa fa-fw fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/user/721File" target="_blank"><i class="fa fa-fw fa-youtube"></i></a>
+                    <a href="https://www.linkedin.com/company/business-information-solutions-inc" target="_blank"><i class="fa fa-fw fa-linkedin"></i></a>
+                    <a href="https://plus.google.com/108312288827231568420/posts" target="_blank"><i class="fa fa-fw fa-google-plus"></i></a>
+                    <a href="<?php echo home_url(); ?>/blog"><i class="fa fa-fw fa-rss"></i></a>
+                </div>
             </div>
         </div>
     </div>
@@ -62,7 +67,7 @@
         <div class="copyright">Copyright&copy; <?php echo date("Y"); ?>. All Rights Reserved <span class="pipe">|</span> <span class="copyright-links"><a href="<?php echo home_url(); ?>/privacy">Privacy Statement</a></span>
         </div>
         <div class="netgain-seo">
-            Website Designed by <img src="<?php bloginfo('template_url'); ?>/img/netgain-logo-sm.png" alt="">
+            Website Designed by <a href="http://www.netgainseo.com" target="_blank"><img src="<?php bloginfo('template_url'); ?>/img/netgain-logo-sm.png" alt=""></a>
         </div>
     </div>
 </footer>

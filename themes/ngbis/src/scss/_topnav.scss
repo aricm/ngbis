@@ -140,8 +140,9 @@
 }
 
 // The button
-.nav-call-to-action {
+.main-nav .nav-call-to-action {
     padding: 0.25rem 1rem !important;
+    margin-bottom: 5px;
 }
 
 .close-nav {
@@ -254,6 +255,8 @@
         }
         .nav-call-to-action {
             display: block;
+            margin-bottom: 0;
+            padding: 0.75rem 0 !important;
         }
     }
 }

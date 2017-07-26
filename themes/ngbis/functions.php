@@ -86,3 +86,13 @@ function ngbis_widget_init() {
 add_action( 'widgets_init', 'ngbis_widget_init' );
 
 include(STYLESHEETPATH.'/admin/custom_shortcodes.php');
+
+function get_the_post_id() {
+  if (in_the_loop()) {
+       $post_id = get_the_ID();
+  } else {
+       global $wp_query;
+       $post_id = $wp_query->get_queried_object_id();
+         }
+  return $post_id;
+}

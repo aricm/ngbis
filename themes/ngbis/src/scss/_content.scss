@@ -201,6 +201,34 @@
     color: $darkGray !important;
 }
 
+.related-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    position: relative;
+    left: -1rem;
+}
+
+.related-link-box {
+    display: flex;
+    flex: 1 0 0%;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem;
+    min-width: 320px;
+    max-width: 320px;
+    background-color: $primaryColor;
+    h6 {
+        flex: 1 1 auto;
+        line-height: 1.5;
+        margin-bottom: 1.5rem !important;
+        color: #fff;
+    }
+    a {
+        align-self: flex-start;
+    }
+}
+
 @media screen and (max-width: 767px) {
     .blog-sidebar {
         margin-top: 2.5rem;
@@ -208,6 +236,9 @@
     }
     .back-to-blog {
         margin-top: 1.5rem;
+    }
+    .related-link-box {
+        max-width: 100%;
     }
 }
 

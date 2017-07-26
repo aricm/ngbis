@@ -126,6 +126,31 @@ function nga_home_card( $atts, $content ) {
 }
 add_shortcode('carditem','nga_home_card');
 
+// Related page link boxes
+function nga_related_link( $atts, $content ){
+    extract( shortcode_atts( array(
+        'link'   => '',
+        'style'  => '',
+        'class'  => '',
+        'target' => ''
+    ), $atts ) );
+
+    $content = do_shortcode( shortcode_unautop( $content ) );
+    $content = noParagraphs($content);
+
+    if( !empty($style) ) {
+        $styleCode = 'style="'.$style.'"';
+    }
+
+    $return = '';
+    $return .= '<div class="related-link-box ' . $class .'" '.$style.'>';
+        $return .= '<h6>' . $content .'</h6>';
+        $return .= '<a href="' . $link .'" class="btn btn-primary">Learn More</a>';
+    $return .= '</div>';
+    return $return;
+}
+add_shortcode('related','nga_related_link');
+
 
 // Needed for use in text widget
 function ngbis_template_directory_uri() {
