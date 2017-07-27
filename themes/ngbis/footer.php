@@ -1,5 +1,16 @@
 </main>
-<?php if( get_the_post_id() != 16 ): ?>
+<?php
+    $postId = get_the_post_id();
+
+    $videoLink = get_post_meta($postId,'video_link',true);
+
+    if(empty($videoLink)) {
+        $videoLink = "https://www.youtube.com/watch?v=pEjOKBjLPDI";
+    }
+
+    $videoLink = str_ireplace('watch?v=', 'embed/', $videoLink);
+?>
+<?php if( $postId != 16 ): ?>
 <div class="container-fluid bg-texture footer-video">
     <div class="container">
         <div class="row">
@@ -13,7 +24,7 @@
                 </p>
             </div>
             <div class="col col-12 col-lg-7 col-md-12 col-sm-12 embed-responsive embed-responsive-16by9 footer-video-player">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/pEjOKBjLPDI?rel=0" allowfullscreen></iframe>
+                <iframe class="embed-responsive-item" src="<?php echo $videoLink; ?>?rel=0" allowfullscreen></iframe>
             </div>
         </div>
     </div>
@@ -24,7 +35,7 @@
     BiS will take excellent care of your important documents.
 </div>
 
-<?php if( get_the_post_id() != 16 ): ?>
+<?php if( $postId != 16 ): ?>
 <div class="container-fluid text-center footer-contact">
     <div class="container">
         <h4>Contact Us!</h4>

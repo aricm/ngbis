@@ -85,7 +85,6 @@ function ngbis_widget_init() {
 }
 add_action( 'widgets_init', 'ngbis_widget_init' );
 
-include(STYLESHEETPATH.'/admin/custom_shortcodes.php');
 
 function get_the_post_id() {
   if (in_the_loop()) {
@@ -96,3 +95,52 @@ function get_the_post_id() {
          }
   return $post_id;
 }
+
+
+/**
+ * Meta Box
+ *
+ */
+
+function add_video_meta_box($post) {
+    add_meta_box('video_meta_box', 'Youtube Video', 'video_metabox_html_function', 'page', 'normal', 'default');
+}
+add_action('admin_init','add_video_meta_box');
+
+function video_metabox_html_function($post){
+    $field1 = get_post_meta($post->ID, 'video_link', true);
+?>
+    <table width="100%" border="0" cellspacing="4" cellpadding="0">
+        <tr>
+            <td width="16%">
+                <strong>Video Link</strong>
+            </td>
+            <td width="84%">
+                <input type="text" name="video_link" id="video_link" size="72%" value="<?php echo $field1; ?>" />
+            </td>
+        </tr>
+    </table>
+    <input type="hidden" name="video_meta_flag" value="true" />
+<?php
+}
+
+add_action('save_post','save_video_meta', 10, 2);
+
+function save_video_meta($post_id, $post){
+    if ( $post->post_type == 'page' ) {
+        if (isset($_POST['video_meta_flag'])) {
+            updateifstatement('video_link', $post_id);
+        }
+    }
+}
+
+function updateifstatement($fieldname, $postid) {
+    if ( isset( $_POST[$fieldname] ) && $_POST[$fieldname] != '' ) {
+        update_post_meta( $postid, $fieldname, $_POST[$fieldname] );
+    }else{
+        update_post_meta( $postid, $fieldname, '');
+    }
+}
+
+/** Shortcodes */
+include(STYLESHEETPATH.'/admin/custom_shortcodes.php');
