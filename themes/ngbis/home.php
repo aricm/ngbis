@@ -2,7 +2,7 @@
     get_header();
 ?>
 <div class="page-mast">
-    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/07/mast-history.jpg" alt="">
+    <img src="<?php echo home_url(); ?>/wp-content/uploads/2017/08/BridgeBanner.jpg" alt="">
 </div>
 
 <div class="contact-bar">
