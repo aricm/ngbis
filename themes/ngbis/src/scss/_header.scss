@@ -101,7 +101,12 @@
     }
     .header-logo {
         margin: 0.5rem 0 0 0;
-        display: none;
+        // display: none;
+    }
+    .sticky-header {
+        .header-logo {
+            display: none;
+        }
     }
     .header-phone {
         margin: 0;
