@@ -209,6 +209,20 @@
     left: -1rem;
 }
 
+.fourboxes {
+  .related-link-box{
+    min-width: 0!important;
+    max-width: none!important;
+    flex: 1 0 22%!important;
+    h6 {
+        flex: 1 1 auto;
+        line-height: 1.5;
+        margin-bottom: 1.5rem !important;
+        font-size: 1.4em;
+        color: #fff;
+    }
+  }
+}
 .related-link-box {
     display: flex;
     flex: 1 0 0%;
@@ -229,6 +243,14 @@
     }
 }
 
+
+@media screen and (max-width: 1199px) {
+  .fourboxes .related-link-box {
+      min-width: 0 !important;
+      max-width: none !important;
+      flex: 1 0 45% !important;
+  }
+}
 @media screen and (max-width: 767px) {
     .blog-sidebar {
         margin-top: 2.5rem;
