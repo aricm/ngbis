@@ -86,9 +86,14 @@
     background-color: $primaryColor;
     font-size: 0.75rem;
     transition: transform 0.3s ease-in-out;
+    color: white;
 }
 .home-card-item:hover .home-card-text {
     transform: translateY(-100%);
+}
+
+a .home-card-label, a:hover .home-card-label, a:visited .home-card-label{
+  color: white!important;
 }
 
 .testimonials { // container

@@ -48,7 +48,7 @@
     <div class="container subfooter-container">
         <div class="row">
             <div class="col col-12 col-sm-12 col-lg-6 footer-logo">
-                <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/logo2.png" alt=""></a>
+                <a href="<?php echo home_url(); ?>"><img src="<?php bloginfo('template_url'); ?>/img/footerlogo.png" alt=""></a>
             </div>
             <div class="col col-12 col-sm-12 col-lg-6 d-flex flex-column justify-content-between">
                 <div class="social-phone-container">
